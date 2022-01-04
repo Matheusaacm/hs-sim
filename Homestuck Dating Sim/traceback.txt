@@ -1,0 +1,48 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 390, in script
+    e"Sams slowly goes away as you reflect on what to do next."
+IndexError: list index out of range
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 390, in script
+    e"Sams slowly goes away as you reflect on what to do next."
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\display\core.py", line 3130, in interact_core
+    renpy.audio.audio.interact()
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1107, in interact
+    periodic()
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\audio\audio.py", line 979, in periodic_pass
+    c.periodic()
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\audio\audio.py", line 384, in periodic
+    force_stop = self.context.force_stop or (renpy.game.preferences.mute.get(self.mixer, False) and self.stop_on_mute)
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\audio\audio.py", line 306, in get_context
+    mcd = renpy.game.context().music
+  File "C:\Users\aline\Downloads\Programs\renpy-7.3.5-sdk\renpy\game.py", line 245, in context
+    return contexts[index]
+IndexError: list index out of range
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+Homestuck Dating Simulator 1.0
+Sat Jan 01 22:48:11 2022
